@@ -1,0 +1,16 @@
+/*logic [1:0][3:0] data [2:0];
+
+Assign values to all elements and print the complete array using nested for loops.*/
+
+// Code your design here
+module array_;
+  logic [1:0][3:0] data [2:0];
+  int i;
+  initial begin
+    for(i=0;i<$size(data);i++)
+      data[i] = i+1;
+    #1;
+     for(i=0; i<$size(data); i++)
+    $display("%0d",data[i]);
+  end
+endmodule

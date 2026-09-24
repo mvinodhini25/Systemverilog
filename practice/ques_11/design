@@ -1,0 +1,16 @@
+//Dynamic Array — Resize
+
+// Code your design here
+module array_;
+  int array[];
+  initial begin
+    array = new[4];
+    array = '{10,20,30,40};
+    
+    $display("%0p",array);
+    array = new[6](array);
+    array[4] = 50;
+    array[5] = 60;
+    $display("%0p",array);
+  end
+endmodule

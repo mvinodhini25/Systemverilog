@@ -1,0 +1,16 @@
+/*Declare a 2-dimensional packed array:
+
+logic [1:0][3:0] data;
+
+Assign values to data[0] and data[1], then print both values.*/
+
+// Code your design here
+module packet_;
+  logic [1:0][3:0] data;
+  initial begin
+    data[0] = 4'd12;
+    data[1] = 4'd14;
+    #1;
+    $display("%0d",data);
+  end
+endmodule

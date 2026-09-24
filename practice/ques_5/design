@@ -1,0 +1,17 @@
+/* Declare a packed array:
+
+logic [7:0] data;
+
+Assign 8'hA5 and print the value in binary and hexadecimal.*/
+
+// Code your design here
+module packed_;
+  logic [7:0] data;
+  assign data = 8'hA5;
+  
+ initial begin 
+   #1;
+   $display("%0d",data);
+   $display("%0h",data);
+ end
+endmodule

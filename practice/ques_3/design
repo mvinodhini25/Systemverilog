@@ -1,0 +1,23 @@
+/*Declare a real variable and assign:
+
+12.5
+3.14159
+-25.75
+
+Print each value using $display.*/
+
+// Code your design here
+module real_;
+  real a;
+  initial begin
+    a = 12.5;
+    #1;
+    $display("%0d",a);
+    a = 3.1415;
+    #1;
+    $display("%0d",a);
+    a = -25.75;
+    #1;
+    $display("%0d",a);
+  end
+endmodule

@@ -1,0 +1,23 @@
+/*Declare:
+
+logic [1:0][7:0] data [2:0];
+
+Assign different values to every element.
+Identify the packed dimensions and the unpacked dimension.*/
+
+// Code your design here
+module array_;
+  logic [1:0][7:0] data [2:0];
+  initial begin
+    data[0][0] = 8'd32;
+    data[0][1] = 8'd12;
+    data[1][0] = 8'd32;
+    data[1][1] = 8'd15;
+    data[2][0] = 8'd31;
+    data[2][1] = 8'd12;
+    #1;
+    $display("%0d",data[0]);
+    $display("%0d",data[1]);
+    $display("%0d",data[2]);
+  end
+endmodule

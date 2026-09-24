@@ -1,0 +1,20 @@
+/*Write a SystemVerilog program to:
+Declare a dynamic array of int
+Allocate space for 5 elements
+Store 10, 20, 30, 40, 50
+Display all elements using a for loop.*/
+
+// Code your design here
+module array_;
+  int array[];
+  int i;
+  
+  initial begin
+    array = new[5];
+    
+    array = '{10,20,30,40,50};
+    
+    for(i=0;i<$size(array);i++)
+      $display("%0d",array[i]);
+  end
+endmodule

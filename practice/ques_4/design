@@ -1,0 +1,15 @@
+/*Declare three real variables:
+result = a / b;
+Print the result.*/
+
+// Code your design here
+module real_;
+  real a,b,result;
+  assign result = a/b;
+  initial begin
+    a = 10.5;
+    b = 2.5;
+    #1;
+    $display("%0d",result);
+  end
+endmodule

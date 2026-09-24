@@ -1,0 +1,15 @@
+//dynamic array
+
+// Code your testbench here
+// or browse Examples
+module dynamintb;
+  int array[];
+  initial begin
+    array=new[5];
+    array='{2,4,6,8,10};
+    foreach(array[i]) begin
+      $display("array[%0d]---%0d",i,array[i]);
+    end
+    $display("%p",array);
+  end
+endmodule

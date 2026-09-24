@@ -1,0 +1,9 @@
+//Declare a logic [3:0] variable. Assign 4'b10x1 to it and print the value using $display.
+
+module logic_(output logic [3:0] y);
+  assign y = 4'b10x1;
+  initial begin
+    #1;
+    $display("y=%0b",y);
+  end
+endmodule

@@ -1,0 +1,14 @@
+//Declare a 2-state int variable using int and another using integer. Assign positive and negative values and print them.
+
+module int_;
+  int a;
+  integer b;
+  
+  initial begin
+    a = 13;
+    b = -31;
+    #1;
+    $display("%0d",a);
+    $display("%0d",b);
+  end
+endmodule

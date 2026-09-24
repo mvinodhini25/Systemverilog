@@ -1,0 +1,26 @@
+/*Declare:
+
+logic [1:0][3:0][7:0] mem;
+
+Write a program to:
+
+Assign values to all elements.
+Display mem[0][0].
+Display mem[0][1].
+Display mem[1][2].
+Display one bit such as mem[1][2][7].*/
+
+// Code your testbench here
+// or browse Examples
+module array_;
+  logic [1:0][3:0][7:0] mem;
+  int i,j;
+  initial begin
+    for(i=0;i<2;i++) begin
+      for(j=0;j<4;j++) begin
+        mem[i][j] = j+2;
+        $display("mem[%0d][%0d] =%0d",i,j,mem[i][j]);
+      end
+    end
+  end
+endmodule

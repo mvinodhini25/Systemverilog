@@ -1,0 +1,23 @@
+/*Declare a bit [3:0] variable. Try assigning:
+
+4'b1010
+4'b10x1
+4'b1z01
+
+Print the value after each assignment.*/
+
+module bit_;
+  bit [3:0] y;
+  
+  initial begin
+    y = 4'b1010;
+    #1;
+    $display("y=%0b",y);
+    y = 4'b10x0;
+    #1;
+    $display("y=%0b",y);
+    y = 4'b1z10;
+    #1;
+    $display("y=%0b",y);
+  end
+endmodule
