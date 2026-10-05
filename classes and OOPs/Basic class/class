@@ -1,0 +1,11 @@
+module tb;
+
+    myPacket pkt;
+
+    initial begin
+        pkt = new();
+
+        pkt.display();
+    end
+
+endmodule
