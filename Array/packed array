@@ -1,0 +1,18 @@
+Write a SystemVerilog program to:
+
+Declare a single-dimensional packed array logic [7:0] data.
+Assign 8'b10110101 to it.
+Display the complete value.
+Display bit 3.
+Display bits [7:4].
+------------------------------------------------------------
+// Code your design here
+module array_;
+  logic [7:0] data;
+  initial begin
+    data = 8'b10110101;
+    $display("data = %0b",data);
+    $display("bit 3 = %0b",data[2]);
+    $display("bits [7:4] = %0b",data[7:4]);
+  end
+endmodule 
