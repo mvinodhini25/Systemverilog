@@ -1,0 +1,24 @@
+// Code your testbench here
+// or browse Examples
+class Packet;
+    int count;
+    function new (int c = 0);
+        count = c;
+    endfunction
+endclass
+
+module tb;
+    Packet pkt, pkt_alias, pkt_copy;
+
+    initial begin
+        pkt = new (5);
+        pkt_alias = pkt;        // Same object as pkt
+        pkt_copy  = new (5);    // A separate, independent object
+
+        pkt.count = 99;
+
+        $display ("pkt.count       = %0d", pkt.count);
+        $display ("pkt_alias.count = %0d", pkt_alias.count);
+        $display ("pkt_copy.count  = %0d", pkt_copy.count);
+    end
+endmodule
