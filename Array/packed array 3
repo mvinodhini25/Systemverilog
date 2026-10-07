@@ -1,0 +1,27 @@
+Consider:
+
+logic [3:0][7:0] data;
+
+Assign:
+
+data = 32'h12345678;
+
+Display:
+
+data[3]
+data[2]
+data[1]
+data[0]
+-------------------------------
+// Code your testbench here
+// or browse Examples
+module array_;
+  logic [3:0][7:0] data;
+  initial begin
+    data = 32'h12345678;
+    $display("data[0] = %0h",data[0]);
+    $display("data[1] = %0h",data[1]);
+    $display("data[2] = %0h",data[2]);
+    $display("data[3] = %0h",data[3]);
+  end
+endmodule
