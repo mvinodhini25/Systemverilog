@@ -10,7 +10,7 @@ class generator;
     repeat(4) begin
       trans = new();
       
-      if(!trans.gen2drv)
+      if(!trans.randomize())
         $fatal("Randomization is failed");
       
       $display("reset = %0b, d = %0d",reset, d);
