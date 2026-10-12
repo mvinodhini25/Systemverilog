@@ -1,0 +1,22 @@
+class generator;
+  transaction trans;
+  mailbox gen2drv;
+  
+  function new(mailbox gen2drv);
+    this.gen2drv = gen2drv;
+  endfunction
+  
+  task run();
+    repeat(8) begin
+      trans = new();
+      
+      if(!trans.randomize())
+        $fatal("Randomization is failed");
+      
+      $display("trans.reset = %0d",trans.reset);
+      $display("Randomization is passed");
+      gen2drv.put(trans);
+    end
+  endtask
+  
+endclass
