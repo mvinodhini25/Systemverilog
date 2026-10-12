@@ -1,5 +1,5 @@
 class monitor;
-  trasnaction trans;
+  transaction trans;
   mailbox mon2scr;
   virtual ifc vif;
   
