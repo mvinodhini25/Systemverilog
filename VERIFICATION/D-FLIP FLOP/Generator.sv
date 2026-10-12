@@ -13,7 +13,7 @@ class generator;
       if(!trans.randomize())
         $fatal("Randomization is failed");
       
-      $display("reset = %0b, d = %0d",reset, d);
+      $display("trans.reset = %0b, trans.d = %0d",trans.reset, trans.d);
       $display("RAndomization is passed");
       gen2drv.put(trans);
     end
